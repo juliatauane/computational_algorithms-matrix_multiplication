@@ -25,26 +25,36 @@ multiplicação escalares entre a sequência de matrizes com base nas informaç�
 ou seja nas sub-soluções ótimas.
 
 Dada uma sequência de multiplicação de matrizes, sendo:
+
 Multiplicação= A*B*C*D*E*F , portanto:
+
 Multiplicação= A[i1,j1]*B[i2,j2]*C[i3,j3]*D[i4,j4]*E[i5,j5]*F[i6,j6]
+
 Para que a sequência multiplicação de matriz acima seja possível o número de colunas da matriz A
 deve ser igual o número de linhas da matriz B, o número de colunas da matriz B deve ser igual o
-número de linhas da matriz C, e assim por diante. Portanto:
+número de linhas da matriz C, e assim por diante. 
+Portanto:
+
 j1 =i2, j2 =i3, j3 =i4, j4 =i5, j5 =i6
 
 O resultado (matriz X) da multiplicação das matrizes A*B, por exemplo, se dá por:
+
 A[i1,j1]*B[i2,j2] = X [i1,j2]
 
 Resultado do número de multiplicações sendo= i1*j1*j2, sendo que j1=i2
 Dentro da sequência dada há várias possibilidades em fazer a multiplicação das matrizes, ou seja,
 agrupando por exemplo em subconjuntos de soluções ótimas.
 Se considerarmos:
+
 A= [2,2], B=[2,4], C= [4,2], D= [2,4], E=[4, 2], F=[2,4]
 
 Pode-se escrever a sequência de multiplicação das matrizes em um vetor, sendo:
 p[] = vetor que representa a cadeia de multiplicação das matrizes
+
 A= p[i-1]*p[i] ->
+
 Portanto:
+
 p = [2, 2, 4, 2, 4, 2, 4]
 
 Estruturando a resolução do problema através da programação dinâmica pode-se utilizar sub-
